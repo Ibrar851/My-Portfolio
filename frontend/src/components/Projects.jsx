@@ -2,24 +2,31 @@ import { useState } from "react";
 import { FaReact, FaNodeJs, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
 
+// Import images from assets
+import studentQueryImg from "../assets/studentquery.png";
+import todoListImg from "../assets/todolist.png";
+import crmsImg from "../assets/crms.png";
+import analyticsImg from "../assets/analytics.png";
+
 export default function Projects() {
   const [filter, setFilter] = useState("All");
 
   const projects = [
     {
-      title: "Bookstore App",
+      title: "Student Query",
       category: "Fullstack",
-      description: "Full stack CRUD app for managing books.",
-      image: "/images/bookstore.png", // <-- place your image in public/images/
+      description:
+        "A CRUD app for managing student queries with a responsive frontend and Node.js backend.",
+      image: studentQueryImg,
       tech: [<FaReact />, <FaNodeJs />, <SiExpress />, <SiMongodb />],
-      demo: "https://your-demo-link.com",
-      code: "https://github.com/your-repo",
+      demo: "https://students-queries.vercel.app/",
+      code: "https://github.com/Ibrar851/Students-Queries.git",
     },
     {
       title: "TodoList",
       category: "Frontend",
       description: "Responsive Todo app built with React.",
-      image: "/images/todolist.png",
+      image: todoListImg,
       tech: [<FaReact />, <SiTailwindcss />],
       demo: "https://your-demo-link.com",
       code: "https://github.com/your-repo",
@@ -28,7 +35,7 @@ export default function Projects() {
       title: "CRMS (FYP)",
       category: "Fullstack",
       description: "Customer Relationship Management System (FYP).",
-      image: "/images/crms.png",
+      image: crmsImg,
       tech: [<FaReact />, <FaNodeJs />, <SiMongodb />],
       demo: "https://your-demo-link.com",
       code: "https://github.com/your-repo",
@@ -37,7 +44,7 @@ export default function Projects() {
       title: "Analytics Portal",
       category: "Backend",
       description: "Small-Mall analytics dashboard with APIs.",
-      image: "/images/analytics.png",
+      image: analyticsImg,
       tech: [<FaNodeJs />, <SiExpress />, <SiMongodb />],
       demo: "https://your-demo-link.com",
       code: "https://github.com/your-repo",
@@ -60,7 +67,7 @@ export default function Projects() {
           My <span className="text-blue-500">Projects</span>
         </h1>
         <div className="flex justify-center space-x-4 text-black">
-          {["All", "Frontend", "Backend", "MERN Stack"].map((cat) => (
+          {["All", "Frontend", "Backend", "Fullstack"].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
