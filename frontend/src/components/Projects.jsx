@@ -4,7 +4,7 @@ import { SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
 
 // Import images from assets
 import studentQueryImg from "../assets/studentquery.png";
-import todoListImg from "../assets/todolist.png";
+import emsImg from "../assets/ems.png"; // ✅ fixed variable name
 import crmsImg from "../assets/crms.png";
 import analyticsImg from "../assets/analytics.png";
 
@@ -18,34 +18,35 @@ export default function Projects() {
       description:
         "A CRUD app for managing student queries with a responsive frontend and Node.js backend.",
       image: studentQueryImg,
-      tech: [<FaReact />, <FaNodeJs />, <SiExpress />, <SiMongodb />],
+      tech: [<FaReact key="r1" />, <FaNodeJs key="n1" />, <SiExpress key="e1" />, <SiMongodb key="m1" />],
       demo: "https://students-queries.vercel.app/",
       code: "https://github.com/Ibrar851/Students-Queries.git",
     },
     {
-      title: "TodoList",
+      title: "Employee Management System",
       category: "Frontend",
-      description: "Responsive Todo app built with React.",
-      image: todoListImg,
-      tech: [<FaReact />, <SiTailwindcss />],
-      demo: "https://your-demo-link.com",
-      code: "https://github.com/your-repo",
+      description:
+        "A responsive employee management web app built using React and Tailwind CSS with CRUD-like UI flow.",
+      image: emsImg,
+      tech: [<FaReact key="r2" />, <SiTailwindcss key="t1" />],
+      demo: "https://employee-management-system-silk-two.vercel.app/",
+      code: "https://github.com/Ibrar851/Employee-Management-System.git",
     },
     {
       title: "CRMS (FYP)",
       category: "Fullstack",
-      description: "Customer Relationship Management System (FYP).",
+      description: "Customer Relationship Management System (Final Year Project) with MERN Stack.",
       image: crmsImg,
-      tech: [<FaReact />, <FaNodeJs />, <SiMongodb />],
+      tech: [<FaReact key="r3" />, <FaNodeJs key="n2" />, <SiMongodb key="m2" />],
       demo: "https://your-demo-link.com",
       code: "https://github.com/your-repo",
     },
     {
       title: "Analytics Portal",
       category: "Backend",
-      description: "Small-Mall analytics dashboard with APIs.",
+      description: "An analytics dashboard API backend built with Express and MongoDB.",
       image: analyticsImg,
-      tech: [<FaNodeJs />, <SiExpress />, <SiMongodb />],
+      tech: [<FaNodeJs key="n3" />, <SiExpress key="e2" />, <SiMongodb key="m3" />],
       demo: "https://your-demo-link.com",
       code: "https://github.com/your-repo",
     },
