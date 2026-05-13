@@ -9,7 +9,6 @@ const Hero = () => {
     >
       {/* Main Container */}
       <div className="flex flex-col md:flex-row items-center justify-between bg-dark dark:bg-[#0d1117]/80 backdrop-blur-md border border-gray-300 dark:border-gray-700 rounded-3xl shadow-2xl p-8 md:p-12 w-full max-w-7xl mx-auto">
-        
         {/* Left: Profile Image */}
         <div className="flex justify-center md:justify-start mb-8 md:mb-0 md:mr-12 flex-shrink-0">
           <div className="relative w-52 h-52 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full border-4 border-blue-500 overflow-hidden shadow-lg">
@@ -27,7 +26,11 @@ const Hero = () => {
             Hi, I’m <span className="text-blue-500">Ibrar Ul Haq</span>
           </h1>
           <p className="text-gray-600 dark:text-gray-300 mb-8 text-base sm:text-lg md:text-xl leading-relaxed">
-            A passionate <span className="text-blue-400">MERN Stack Developer</span> crafting powerful, responsive, and modern web applications using React, Node.js, Express, and MongoDB.
+            A passionate{" "}
+            <span className="text-blue-400">Full Stack Developer</span> crafting
+            powerful, responsive, and modern web applications using React.js,
+            Next.js, Node.js, Express.js, MongoDB, PostgreSQL, Tailwind CSS,
+            Bootstrap, and Material UI.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">

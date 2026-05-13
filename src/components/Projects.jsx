@@ -2,45 +2,79 @@ import { useState } from "react";
 import { FaReact, FaNodeJs, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
 
+// Import images from assets
+import studentQueryImg from "../assets/studentquery.png";
+import emsImg from "../assets/ems.png"; // ✅ fixed variable name
+import crmsImg from "../assets/crms.png";
+import analyticsImg from "../assets/analytics.png";
+import restImg from "../assets/rest.png";
+
 export default function Projects() {
   const [filter, setFilter] = useState("All");
 
   const projects = [
     {
-      title: "Bookstore App",
+      title: "Student Query",
       category: "Fullstack",
-      description: "Full stack CRUD app for managing books.",
-      image: "/images/bookstore.png", // <-- place your image in public/images/
-      tech: [<FaReact />, <FaNodeJs />, <SiExpress />, <SiMongodb />],
-      demo: "https://your-demo-link.com",
-      code: "https://github.com/your-repo",
+      description:
+        "A CRUD app for managing student queries with a responsive frontend and Node.js backend.",
+      image: studentQueryImg,
+      tech: [
+        <FaReact key="r1" />,
+        <FaNodeJs key="n1" />,
+        <SiExpress key="e1" />,
+        <SiMongodb key="m1" />,
+      ],
+      demo: "https://students-queries.vercel.app/",
+      code: "https://github.com/Ibrar851/Students-Queries.git",
     },
     {
-      title: "TodoList",
+      title: "Employee Management System",
       category: "Frontend",
-      description: "Responsive Todo app built with React.",
-      image: "/images/todolist.png",
-      tech: [<FaReact />, <SiTailwindcss />],
-      demo: "https://your-demo-link.com",
-      code: "https://github.com/your-repo",
+      description:
+        "A responsive employee management web app built using React and Tailwind CSS with CRUD-like UI flow.",
+      image: emsImg,
+      tech: [<FaReact key="r2" />, <SiTailwindcss key="t1" />],
+      demo: "https://employee-management-system-silk-two.vercel.app/",
+      code: "https://github.com/Ibrar851/Employee-Management-System.git",
     },
     {
       title: "CRMS (FYP)",
       category: "Fullstack",
-      description: "Customer Relationship Management System (FYP).",
-      image: "/images/crms.png",
-      tech: [<FaReact />, <FaNodeJs />, <SiMongodb />],
+      description:
+        "Customer Relationship Management System (Final Year Project) with MERN Stack.",
+      image: crmsImg,
+      tech: [
+        <FaReact key="r3" />,
+        <FaNodeJs key="n2" />,
+        <SiMongodb key="m2" />,
+      ],
       demo: "https://your-demo-link.com",
       code: "https://github.com/your-repo",
     },
     {
       title: "Analytics Portal",
       category: "Backend",
-      description: "Small-Mall analytics dashboard with APIs.",
-      image: "/images/analytics.png",
-      tech: [<FaNodeJs />, <SiExpress />, <SiMongodb />],
+      description:
+        "An analytics dashboard API backend built with Express and MongoDB.",
+      image: analyticsImg,
+      tech: [
+        <FaNodeJs key="n3" />,
+        <SiExpress key="e2" />,
+        <SiMongodb key="m3" />,
+      ],
       demo: "https://your-demo-link.com",
       code: "https://github.com/your-repo",
+    },
+    {
+      title: "Restaurant Site",
+      category: "Frontend",
+      description:
+        "A modern and responsive Restaurant Website built with React, Vite, and Bootstrap. It features a stylish UI, food menu, gallery, reviews, and contact sections to help restaurants showcase their services professionally online.",
+      image: restImg,
+      tech: [<FaReact key="r2" />, <SiTailwindcss key="t1" />],
+      demo: "https://restaurant-site-lyart-three.vercel.app",
+      code: "https://github.com/Ibrar851/restaurant-site.git",
     },
   ];
 
@@ -60,7 +94,7 @@ export default function Projects() {
           My <span className="text-blue-500">Projects</span>
         </h1>
         <div className="flex justify-center space-x-4 text-black">
-          {["All", "Frontend", "Backend", "MERN Stack"].map((cat) => (
+          {["All", "Frontend", "Backend", "Fullstack"].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}

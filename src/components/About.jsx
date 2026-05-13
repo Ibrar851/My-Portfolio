@@ -1,25 +1,26 @@
-import { FaGithub } from "react-icons/fa";
 import {
-  SiTailwindcss,
   SiMongodb,
-  SiExpress,
+  SiTailwindcss,
   SiReact,
+  SiExpress,
   SiNodedotjs,
+  SiBootstrap,
+  SiPostgresql,
+  SiNextdotjs,
+  SiMui,
 } from "react-icons/si";
+
+import { FaGithub } from "react-icons/fa";
 import { BsDatabaseFillCheck } from "react-icons/bs";
 
 export default function About() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white p-6 md:p-16 font-sans transition-colors duration-500">
-       <h1 className="text-4xl font-bold mb-12 text-center">
+      <h1 className="text-4xl font-bold mb-12 text-center">
         Wellcome to<span className="text-blue-500"> About</span>
-        </h1>
+      </h1>
       {/* Navbar */}
-      <nav className="flex justify-between items-center mb-10">
-        
-      
-        
-      </nav>
+      <nav className="flex justify-between items-center mb-10"></nav>
 
       {/* Main Content */}
       <div className="grid md:grid-cols-2 gap-10">
@@ -29,12 +30,18 @@ export default function About() {
             About <span className="text-blue-500">Me</span>
           </h1>
           <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-            I'm a passionate <span className="font-semibold text-blue-500">MERN Stack Developer</span> 
-            with a focus on building scalable, secure, and visually appealing web applications.
-            I love creating efficient, maintainable code and continuously learning new technologies.
+            I'm a passionate{" "}
+            <span className="font-semibold text-blue-500">
+              MERN Stack Developer
+            </span>
+            with a focus on building scalable, secure, and visually appealing
+            web applications. I love creating efficient, maintainable code and
+            continuously learning new technologies.
           </p>
 
-          <h2 className="text-2xl text-blue-500 font-semibold mb-2">Education & Certifications</h2>
+          <h2 className="text-2xl text-blue-500 font-semibold mb-2">
+            Education & Certifications
+          </h2>
           <ul className="list-disc list-inside text-gray-600 dark:text-gray-400 space-y-2">
             <li>
               <span className="text-gray-900 dark:text-white font-medium">
@@ -44,7 +51,9 @@ export default function About() {
               BS Computer Science
             </li>
             <li>
-              <span className="text-gray-900 dark:text-white font-medium">NAVTTC (2025)</span>
+              <span className="text-gray-900 dark:text-white font-medium">
+                NAVTTC (2025)
+              </span>
               <br />
               Full Stack Development Course
             </li>
@@ -53,7 +62,9 @@ export default function About() {
 
         {/* Right Section */}
         <div>
-          <h2 className="text-xl text-blue-500 font-semibold mb-4">Key Strengths</h2>
+          <h2 className="text-xl text-blue-500 font-semibold mb-4">
+            Key Strengths
+          </h2>
           <div className="grid grid-cols-2 gap-4">
             <SkillCard icon={<SiMongodb />} label="MERN Stack" />
             <SkillCard icon={<BsDatabaseFillCheck />} label="REST APIs" />
@@ -62,6 +73,10 @@ export default function About() {
             <SkillCard icon={<SiReact />} label="React.js" />
             <SkillCard icon={<SiExpress />} label="Express.js" />
             <SkillCard icon={<SiNodedotjs />} label="Node.js" />
+            <SkillCard icon={<SiBootstrap />} label="Bootstrap" />
+            <SkillCard icon={<SiPostgresql />} label="PostgreSQL" />
+            <SkillCard icon={<SiNextdotjs />} label="Next.js" />
+            <SkillCard icon={<SiMui />} label="Material UI" />
           </div>
 
           <div className="mt-8">
@@ -84,7 +99,9 @@ function SkillCard({ icon, label }) {
   return (
     <div className="border border-gray-300 dark:border-gray-700 bg-white/70 dark:bg-white/10 backdrop-blur-md rounded-xl p-4 flex items-center space-x-4 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-md transition duration-300">
       <div className="text-2xl text-blue-500">{icon}</div>
-      <div className="text-gray-800 dark:text-gray-200 font-medium">{label}</div>
+      <div className="text-gray-800 dark:text-gray-200 font-medium">
+        {label}
+      </div>
     </div>
   );
 }
