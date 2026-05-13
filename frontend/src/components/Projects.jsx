@@ -7,6 +7,7 @@ import studentQueryImg from "../assets/studentquery.png";
 import emsImg from "../assets/ems.png"; // ✅ fixed variable name
 import crmsImg from "../assets/crms.png";
 import analyticsImg from "../assets/analytics.png";
+import restImg from "../assets/rest.png";
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
@@ -18,7 +19,12 @@ export default function Projects() {
       description:
         "A CRUD app for managing student queries with a responsive frontend and Node.js backend.",
       image: studentQueryImg,
-      tech: [<FaReact key="r1" />, <FaNodeJs key="n1" />, <SiExpress key="e1" />, <SiMongodb key="m1" />],
+      tech: [
+        <FaReact key="r1" />,
+        <FaNodeJs key="n1" />,
+        <SiExpress key="e1" />,
+        <SiMongodb key="m1" />,
+      ],
       demo: "https://students-queries.vercel.app/",
       code: "https://github.com/Ibrar851/Students-Queries.git",
     },
@@ -35,20 +41,40 @@ export default function Projects() {
     {
       title: "CRMS (FYP)",
       category: "Fullstack",
-      description: "Customer Relationship Management System (Final Year Project) with MERN Stack.",
+      description:
+        "Customer Relationship Management System (Final Year Project) with MERN Stack.",
       image: crmsImg,
-      tech: [<FaReact key="r3" />, <FaNodeJs key="n2" />, <SiMongodb key="m2" />],
+      tech: [
+        <FaReact key="r3" />,
+        <FaNodeJs key="n2" />,
+        <SiMongodb key="m2" />,
+      ],
       demo: "https://your-demo-link.com",
       code: "https://github.com/your-repo",
     },
     {
       title: "Analytics Portal",
       category: "Backend",
-      description: "An analytics dashboard API backend built with Express and MongoDB.",
+      description:
+        "An analytics dashboard API backend built with Express and MongoDB.",
       image: analyticsImg,
-      tech: [<FaNodeJs key="n3" />, <SiExpress key="e2" />, <SiMongodb key="m3" />],
+      tech: [
+        <FaNodeJs key="n3" />,
+        <SiExpress key="e2" />,
+        <SiMongodb key="m3" />,
+      ],
       demo: "https://your-demo-link.com",
       code: "https://github.com/your-repo",
+    },
+    {
+      title: "Restaurant Site",
+      category: "Frontend",
+      description:
+        "A modern and responsive Restaurant Website built with React, Vite, and Bootstrap. It features a stylish UI, food menu, gallery, reviews, and contact sections to help restaurants showcase their services professionally online.",
+      image: restImg,
+      tech: [<FaReact key="r2" />, <SiTailwindcss key="t1" />],
+      demo: "https://restaurant-site-lyart-three.vercel.app",
+      code: "https://github.com/Ibrar851/restaurant-site.git",
     },
   ];
 
